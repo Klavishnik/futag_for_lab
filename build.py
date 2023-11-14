@@ -27,8 +27,7 @@ with open("result.ini", "a") as f :
 with open("result.ini", "a") as f :
     start = time.time()
     generator = Generator(
-        FUTAG_PATH,
-        lib_path)
+        FUTAG_PATH, lib_path, target_type=AFLPLUSPLUS)
     generator.gen_targets()
     end = time.time()
     f.write("- Generation time: ")

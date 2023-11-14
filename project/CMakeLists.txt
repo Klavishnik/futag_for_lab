@@ -22,7 +22,6 @@ target_include_directories(my_library PUBLIC ${LIB})
 install(TARGETS my_library DESTINATION lib)
 
 # Install header files to the 'include' directory
-#install(DIRECTORY lib/*.h DESTINATION include)
 install(FILES ${LIB_HEADERS} DESTINATION include)
 # Create an executable using the main.c file and the library
 add_executable(bin main.c)
