@@ -26,4 +26,4 @@ install(TARGETS my_library DESTINATION lib)
 install(FILES ${LIB_HEADERS} DESTINATION include)
 # Create an executable using the main.c file and the library
 add_executable(bin main.c)
-target_link_libraries(bin PRIVATE my_library)
+target_link_libraries(bin PRIVATE my_library m)
