@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.20)
 project("lab3_fuzz" C)
 
 set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -gdwarf-4 -Wall -Wextra -Wpedantic -fno-omit-frame-pointer")
+set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -gdwarf-4 -Wall -Wextra -Wpedantic -fno-omit-frame-pointer -g")
 
 set(SRC src)
 set(LIB lib)
@@ -26,4 +26,4 @@ install(TARGETS my_library DESTINATION lib)
 install(FILES ${LIB_HEADERS} DESTINATION include)
 # Create an executable using the main.c file and the library
 add_executable(bin main.c)
-target_link_libraries(bin PRIVATE my_library)
+target_link_libraries(bin PRIVATE my_library m)
