@@ -7,7 +7,7 @@ from futag.sysmsg import *
 from futag.fuzzer import *
 import time 
 
-FUTAG_PATH = "/Futag/futag-llvm"
+FUTAG_PATH = "/home/futag/Futag/futag-llvm"
 lib_path = "project/"
 
 with open("result.ini", "a") as f :
